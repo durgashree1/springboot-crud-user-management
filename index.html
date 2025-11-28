@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Operations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 22px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        form {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn-add { background-color: #28a745; }
+        .btn-get { background-color: #007bff; }
+        .btn-delete { background-color: #dc3545; }
+        .btn-update { background-color: #ffc107; color: black; }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Add User</h1>
+    <form action="/addUser" method="post">
+        Enter ID:
+        <input type="text" name="id">
+
+        Enter Name:
+        <input type="text" name="name">
+
+        <input type="submit" value="Add User" class="btn-add">
+    </form>
+
+    <h1>Get User Info</h1>
+    <form action="/getUser" method="get">
+        Enter ID:
+        <input type="text" name="id">
+
+        <input type="submit" value="Get User" class="btn-get">
+    </form>
+
+    <h1>Delete User</h1>
+    <form action="/deleteUser" method="post">
+        Enter ID:
+        <input type="text" name="id">
+
+        <input type="submit" value="Delete User" class="btn-delete">
+    </form>
+
+    <h1>Update User</h1>
+    <form action="/updateUser" method="post">
+        Enter ID:
+        <input type="text" name="id">
+
+        Enter New Name:
+        <input type="text" name="name">
+
+        <input type="submit" value="Update User" class="btn-update">
+    </form>
+
+</div>
+
+</body>
+</html>
